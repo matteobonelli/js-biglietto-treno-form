@@ -3,7 +3,17 @@ const under18Discount = 0.2;
 const over65Discount = 0.4;
 const generate = document.querySelector('.btn');
 const cancella = document.querySelector('.btn-warning');
+let carrozza = randomizer(1, 10);
+let codiceCP = randomizer(1, 100000);
+let ticketPremium = randomizer(0, 1)
 console.log(generate, cancella);
+console.log(carrozza, codiceCP);
+
+  function randomizer(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  }
 
 cancella.addEventListener('click', function(){
     const nameSurname = document.getElementById('nome').value = '';
@@ -40,8 +50,15 @@ generate.addEventListener('click' , function(){
         ticket.querySelector('.my-bg-gray > div').innerHTML =`
         ${nameSurname}
         `;
-        ticket.querySelector('.col-8').innerHTML=`
+        ticket.querySelector('td:last-child').innerHTML=`
         ${price.toFixed(2)}€
         `;
+        ticket.querySelector('#carrozza').innerHTML = `${carrozza}`;
+        ticket.querySelector('#codice-cp').innerHTML = `${codiceCP}`;
+        if(ticketPremium === 1){
+            ticket.querySelector('#biglietto').innerHTML = 'Ticket Premium';
+        } else{
+            ticket.querySelector('#biglietto').innerHTML = 'Ticket Standard';
+        }
     }
 })
