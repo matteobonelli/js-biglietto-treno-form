@@ -24,6 +24,11 @@ generate.addEventListener('click' , function(){
     } else{
         const ticket = document.getElementById('ticket');
         ticket.classList.remove('d-none');
-
+        ticket.querySelector('div').innerHTML =`
+        ${nameSurname}
+        `;
+        ticket.querySelector('.price').innerHTML=`
+        ${price.toFixed(2)}€
+        `;
     }
 })
