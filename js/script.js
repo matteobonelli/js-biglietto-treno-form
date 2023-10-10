@@ -4,13 +4,14 @@ const over65Discount = 0.4;
 const ticket = document.getElementById('ticket');
 const wrongText = document.getElementById('wrong-text');
 const generate = document.querySelector('.btn');
-const cancella = document.querySelector('.btn-warning');
+const cancella = document.querySelector('#annulla');
 let price;
 let carrozza = randomizer(1, 10);
 let codiceCP = randomizer(1, 100000);
 let ticketPremium = randomizer(0, 1);
 console.log(generate, cancella);
 console.log(carrozza, codiceCP);
+console.log(ticketPremium);
 
   function randomizer(min, max) {
     min = Math.ceil(min);
@@ -26,6 +27,8 @@ cancella.addEventListener('click', function(){
     carrozza = randomizer(1, 10);
     codiceCP = randomizer(1, 100000);
     ticketPremium = randomizer(0, 1);
+    console.log(carrozza, codiceCP);
+    console.log(ticketPremium);
     wrongText.classList.add('d-none');
     ticket.classList.add('d-none');
 

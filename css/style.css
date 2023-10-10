@@ -1,8 +1,27 @@
+.my-bg-danger{
+    background-color: #b91450;
+}
+.btn{
+    border-color: #939393;
+    background-color: #cccccc;
+    font-weight: bold;
+    font-size: 20px;
+    color: #b91450 ;
+}
+.btn:hover{
+    border-color: #e29149;
+    background-color: rgba(0, 0, 0, 0.267);
+    color: #b91450 ;
+}
 label{
-    color: #dc3545 !important;
+    color: #b91450 !important;
 }
 input, select{
-    border-color: #dc3545 !important;
+    border-color: #b91450 !important;
+    font-weight: bold !important;
+}
+input{
+    text-align: center;
 }
 .card-body.border-start, .card-body.border-top, .card-body.border-bottom {
     border-color: black !important;
