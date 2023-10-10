@@ -5,9 +5,10 @@ const ticket = document.getElementById('ticket');
 const wrongText = document.getElementById('wrong-text');
 const generate = document.querySelector('.btn');
 const cancella = document.querySelector('.btn-warning');
+let price;
 let carrozza = randomizer(1, 10);
 let codiceCP = randomizer(1, 100000);
-let ticketPremium = randomizer(0, 1)
+let ticketPremium = randomizer(0, 1);
 console.log(generate, cancella);
 console.log(carrozza, codiceCP);
 
@@ -21,7 +22,10 @@ cancella.addEventListener('click', function(){
     const nameSurname = document.getElementById('nome').value = '';
     const km = document.getElementById('km').value = '';
     const age = document.getElementById('age').value = 'over18';
-    let price = 0;
+    price = 0;
+    carrozza = randomizer(1, 10);
+    codiceCP = randomizer(1, 100000);
+    ticketPremium = randomizer(0, 1);
     wrongText.classList.add('d-none');
     ticket.classList.add('d-none');
 
@@ -31,7 +35,7 @@ generate.addEventListener('click' , function(){
     const nameSurname = document.getElementById('nome').value;
     const km = parseInt(document.getElementById('km').value);
     const age = document.getElementById('age').value;
-    let price = kmPrice * km;
+    price = kmPrice * km;
     let priceUnder18 = price * under18Discount;
     let priceOver65 = price * over65Discount;
     console.log(nameSurname, km, age);
