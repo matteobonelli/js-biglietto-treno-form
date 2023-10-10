@@ -1,0 +1,6 @@
+label{
+    color: #dc3545 !important;
+}
+input, select{
+    border-color: #dc3545 !important;
+}

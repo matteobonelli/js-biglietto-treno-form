@@ -8,27 +8,29 @@
     <title>Calcolo del prezzo del biglietto del treno</title>
 </head>
 <body class="bg-danger">
-    <div class="container">
+    <div class="container text-center">
         <h2 class="text-light text-uppercase text-center fw-bolder fs-1 py-3">Calcola il prezzo del tuo biglietto</h2>
         <div class="bg-white p-5 mb-4">
-            <div class="mb-3">
-                <label for="nomecognome" class="form-label">Nome Cognome</label>
-                <input type="text" value="" class="form-control" id="nome" name="nome" placeholder="">
+            <div class="row mb-5 justify-content-around">
+                <div class="col-3 px-3">
+                    <label for="nomecognome" class="form-label">Nome Cognome</label>
+                    <input type="text" value="" class="form-control" id="nome" name="nome" placeholder="">
+                </div>
+                <div class="col-3 px-3">
+                    <label for="km" class="form-label">Km da percorrere</label>
+                    <input type="text" value="" class="form-control" id="km" name="km" placeholder="">
+                </div>
+                <div class="col-3 px-3">
+                    <label for="age" class="form-label">Fascia d'età</label>
+                    <select name="age" class="form-select" id="age" value="">
+                        <option value="over18">Maggiorenne</option>
+                        <option value="under18">Minorenne</option>
+                        <option value="over65">Anziano</option>
+                    </select>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="km" class="form-label">Km da percorrere</label>
-                <input type="text" value="" class="form-control" id="km" name="km" placeholder="">
-            </div>
-            
-            <div class="mb-3">
-                <label for="age" class="form-label">Fascia d'età</label>
-                <select name="age" class="form-select" id="age" value="">
-                    <option value="over18">Maggiorenne</option>
-                    <option value="under18">Minorenne</option>
-                    <option value="over65">Anziano</option>
-                </select>
-            </div>
-            <button class="btn btn-danger">Genera</button>
+            <button class="btn btn-danger me-3">Genera</button>
+            <button class="btn btn-warning">Annulla</button>
             
         </div>
         <div class="d-none bg-white text-center text-danger text-uppercase py-4" id="wrong-text">

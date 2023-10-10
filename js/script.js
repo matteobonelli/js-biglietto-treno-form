@@ -2,7 +2,20 @@ const kmPrice = 0.21;
 const under18Discount = 0.2;
 const over65Discount = 0.4;
 const generate = document.querySelector('.btn');
-console.log(generate);
+const cancella = document.querySelector('.btn-warning');
+console.log(generate, cancella);
+
+cancella.addEventListener('click', function(){
+    const nameSurname = document.getElementById('nome').value = '';
+    const km = document.getElementById('km').value = '';
+    const age = document.getElementById('age').value = 'over18';
+    let price = 0;
+    const wrongText = document.getElementById('wrong-text');
+    const ticket = document.getElementById('ticket');
+    wrongText.classList.add('d-none');
+    ticket.classList.add('d-none');
+
+})
 
 generate.addEventListener('click' , function(){
     const nameSurname = document.getElementById('nome').value;
