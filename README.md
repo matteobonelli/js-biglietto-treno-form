@@ -5,3 +5,4 @@
 5. Creo un div che visualizza al click, con input corretti, il nome della persona ed il prezzo del biglietto.
 6. Creo un tasto annulla che resetta la pagina senza ricaricarla
 7. Aggiusto il css per abbellire la pagina
+8. Aggiungo una funzione randomizer per generare la carrozza, il codice cp, ed il tipo di biglietto (standard o premium)
