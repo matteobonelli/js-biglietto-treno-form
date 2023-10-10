@@ -31,6 +31,8 @@ generate.addEventListener('click' , function(){
     const nameSurname = document.getElementById('nome').value;
     const km = parseInt(document.getElementById('km').value);
     const age = document.getElementById('age').value;
+    const ticket = document.getElementById('ticket');
+    const wrongText = document.getElementById('wrong-text');
     let price = kmPrice * km;
     let priceUnder18 = price * under18Discount;
     let priceOver65 = price * over65Discount;
@@ -42,14 +44,10 @@ generate.addEventListener('click' , function(){
     }
     console.log(price);
     if(nameSurname === '' || km === '' || isNaN(km)){
-        const wrongText = document.getElementById('wrong-text');
         wrongText.classList.remove('d-none');
-        const ticket = document.getElementById('ticket');
         ticket.classList.add('d-none');
     } else{
-        const wrongText = document.getElementById('wrong-text');
         wrongText.classList.add('d-none');
-        const ticket = document.getElementById('ticket');
         ticket.classList.remove('d-none');
         ticket.querySelector('.my-bg-gray > div').innerHTML =`
         ${nameSurname}
