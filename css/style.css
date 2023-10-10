@@ -4,3 +4,9 @@ label{
 input, select{
     border-color: #dc3545 !important;
 }
+.card-body.border-start, .card-body.border-top, .card-body.border-bottom {
+    border-color: black !important;
+}
+.my-bg-gray{
+    background-color: #808080 !important ;
+}

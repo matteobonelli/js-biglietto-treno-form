@@ -37,10 +37,10 @@ generate.addEventListener('click' , function(){
     } else{
         const ticket = document.getElementById('ticket');
         ticket.classList.remove('d-none');
-        ticket.querySelector('div').innerHTML =`
+        ticket.querySelector('.my-bg-gray > div').innerHTML =`
         ${nameSurname}
         `;
-        ticket.querySelector('.price').innerHTML=`
+        ticket.querySelector('.col-8').innerHTML=`
         ${price.toFixed(2)}€
         `;
     }
