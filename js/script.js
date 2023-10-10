@@ -5,8 +5,12 @@ const generate = document.querySelector('.btn');
 console.log(generate);
 
 generate.addEventListener('click' , function(){
-    let nameSurname = document.getElementById('nome').value;
-    let km = parseInt(document.getElementById('km').value);
-    let age = document.getElementById('age').value;
+    const nameSurname = document.getElementById('nome').value;
+    const km = parseInt(document.getElementById('km').value);
+    const age = document.getElementById('age').value;
     console.log(nameSurname, km, age);
+    if(nameSurname === '' || km === '' || isNaN(km)){
+        const wrongText = document.getElementById('wrong-text');
+        wrongText.classList.remove('d-none')
+    }
 })
