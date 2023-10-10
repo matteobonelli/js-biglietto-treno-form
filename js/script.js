@@ -43,8 +43,12 @@ generate.addEventListener('click' , function(){
     console.log(price);
     if(nameSurname === '' || km === '' || isNaN(km)){
         const wrongText = document.getElementById('wrong-text');
-        wrongText.classList.remove('d-none')
+        wrongText.classList.remove('d-none');
+        const ticket = document.getElementById('ticket');
+        ticket.classList.add('d-none');
     } else{
+        const wrongText = document.getElementById('wrong-text');
+        wrongText.classList.add('d-none');
         const ticket = document.getElementById('ticket');
         ticket.classList.remove('d-none');
         ticket.querySelector('.my-bg-gray > div').innerHTML =`
